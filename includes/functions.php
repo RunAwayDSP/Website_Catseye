@@ -343,7 +343,8 @@ function getLatents($itemid) {
 function getItemDrops($itemid) {
   global $dbconn;
   
-  $strSQL = "SELECT * from mob_droplist LEFT JOIN mob_groups on mob_droplist.dropId=mob_groups.dropid LEFT JOIN mob_spawn_points on mob_groups.groupid=mob_spawn_points.groupid where mob_droplist.itemId=:itemid and mob_droplist.dropType>='0'";
+  $strSQL = "SELECT mob_groups.name,mob_droplist.dropType,mob_droplist.itemRate,mob_groups.zoneid from mob_droplist LEFT JOIN mob_groups on mob_droplist.dropId=mob_groups.dropid LEFT JOIN mob_pools on mob_groups.poolid=mob_pools.poolid where mob_droplist.itemId=:itemid and mob_droplist.dropType>='0'";
+  
   $statement = $dbconn->prepare($strSQL);
   $statement->bindValue(':itemid',$itemid);
   

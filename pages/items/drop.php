@@ -10,14 +10,14 @@ echo '<table>
 foreach ($drops as $drop) {
 $droptype=$drop['dropType'];
 $rate=$drop['itemRate']/10;
-if(!$drop['polutils_name'])
+if(!$drop['name'])
 {
 }
 else
 {
 echo '
 <tr>
-<td>'.$drop['polutils_name'].'</td>
+<td>'.$drop['name'].'</td>
 <td>'.getZoneName($drop['zoneid']).'</td>
 <td>'.$rate.'%</td><td>'.$droptype_array[$droptype].'</td>
 </tr>';
