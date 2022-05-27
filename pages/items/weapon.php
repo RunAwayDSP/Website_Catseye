@@ -7,7 +7,7 @@ else
 {
 foreach ($weapons as $weapon) {
 echo '<table">
-<tr"><td><b><center>Weapon Information</center></b></td></tr>
+<tr><td><b>Weapon Information</b></td></tr>
 <tr><td>Damage Type:</td><td>'.$damage[$weapon['dmgType']].'</td></tr>
 <tr><td>Hits:</td><td>'.$weapon['hit'].'</td></tr>
 <tr><td>Delay:</td><td>'.$weapon['delay'].'</td></tr>

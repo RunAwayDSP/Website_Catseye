@@ -12,17 +12,17 @@ if (!isset($_POST['name']))
 }
 elseif(strlen($_POST['name'])<'3')
 {
-echo getPanel("warning","Error","You Must enter more than 2 characters");
+echo 'You must enter more than 2 letters';
 }
 elseif(getItemList($_POST['name'])=='empty')
 {
-echo getPanel("warning","Error","No Items Found");
+echo 'No Items Found';
 }
 else
 {
 $name = $_POST['name'];
 $item = getItemList($name);
-echo '<table class="table table-striped">';
+echo '<table>';
 foreach ($item as $items)
 {
 echo '<tr><td><a href="?p=items&id='.$items['itemid'].'">'.ucwords(str_replace('_',' ',$items['sortname'])).'</a></td></tr>';
