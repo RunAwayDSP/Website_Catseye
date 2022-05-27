@@ -6,7 +6,7 @@ if($drops == 'empty')
 else
 {
 echo '<table>
-<tr><td><b><center>Drop Information</center></b></td></tr>';
+<tr><td><b>Drop Information</b></td></tr>';
 foreach ($drops as $drop) {
 $droptype=$drop['dropType'];
 $rate=$drop['itemRate']/10;

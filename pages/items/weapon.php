@@ -6,7 +6,7 @@ if($weapons == 'empty')
 else
 {
 foreach ($weapons as $weapon) {
-echo '<table">
+echo '<table>
 <tr><td><b>Weapon Information</b></td></tr>
 <tr><td>Damage Type:</td><td>'.$damage[$weapon['dmgType']].'</td></tr>
 <tr><td>Hits:</td><td>'.$weapon['hit'].'</td></tr>
@@ -14,7 +14,6 @@ echo '<table">
 <tr><td>Damage:</td><td>'.$weapon['dmg'].'</td></tr>
 <tr><td>Points to Unlock:</td><td>'.$weapon['unlock_points'].'</td></tr>';
 }
-echo '			
-</table>';
+echo '</table>';
 }
 ?>

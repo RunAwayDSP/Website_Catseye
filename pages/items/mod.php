@@ -4,7 +4,7 @@ if($mods == 'empty')
 {
 }else
 {
-echo '<table">
+echo '<table>
 <tr><td><b>Mod Information</b></td></tr>';
 foreach ($mods as $mod) {
 echo '
